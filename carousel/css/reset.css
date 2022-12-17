@@ -1,0 +1,36 @@
+body,ul,li,p,h1,h2,h3,h4,h5,h6,img,br,hr,table,tr,td,dl,dt,dd,form {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Arial,"微软雅黑";
+	font-size: 18px;
+	color: #434343;
+}
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	display: table;
+}
+.clearfix::after {
+	clear: both;
+}
+ul,li {
+	list-style: none;
+}
+img {
+	border: none;
+	vertical-align: top;
+}
+/*一般链接*/
+a {
+	text-decoration: none;
+	color: #555;
+}
+a:hover {
+	color: #3366ff;
+}
+input {
+	outline: none;
+}
+/* <link rel="stylesheet" type="text/css" href=""/> */
