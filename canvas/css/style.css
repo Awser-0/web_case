@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+  list-style: none;
+}
+body {
+  background-color: #f4f4f4;
+}
+.canvasBox {
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  position: relative;
+}
+.canvasBox > canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  user-select: none;
+}
+
+.canvasBox > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: move;
+  --wid: 8px;
+  --wid_half__minus: -4px;
+}
+.canvasBox > div > span {
+  width: var(--wid);
+  height: var(--wid);
+  background-color: aqua;
+  position: absolute;
+}
+.canvasBox > div > span:nth-of-type(1) {
+    top: var(--wid_half__minus);
+    left: var(--wid_half__minus);
+    cursor: nw-resize;
+  }
+  .canvasBox > div > span:nth-of-type(2) {
+    top: var(--wid_half__minus);
+    right: var(--wid_half__minus);
+    cursor: ne-resize;
+  }
+  .canvasBox > div > span:nth-of-type(3) {
+    right: var(--wid_half__minus);
+    bottom: var(--wid_half__minus);
+    cursor: se-resize;
+  }
+  .canvasBox > div > span:nth-of-type(4) {
+    left: var(--wid_half__minus);
+    bottom: var(--wid_half__minus);
+    cursor: sw-resize;
+  }
+
+.canvasPicBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 30px 0;
+}
+.canvasPicBox > canvas {
+  background-color: #fff;
+}
